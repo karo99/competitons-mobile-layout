@@ -1,0 +1,48 @@
+.profile-bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 12px;
+
+  &--image {
+    display: flex;
+    align-items: center;
+    margin: 0 10px 0 21px;
+    position: relative;
+
+    p {
+      font-family: "Poppins SemiBold", serif;
+      font-size: 12px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -44%);
+    }
+  }
+
+  &--info {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 51px - 17px - 10px);
+
+    &--second-row {
+      display: flex;
+      flex-direction: row;
+      font-size: 12px;
+
+      img {
+        margin-right: 6px;
+      }
+
+      p {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &--add-user {
+    display: flex;
+    margin-right: 22px;
+  }
+}
