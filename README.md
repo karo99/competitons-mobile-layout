@@ -1,1 +1,1 @@
-# xtrades-layout-exercise
+# competitions-mobile-layout
