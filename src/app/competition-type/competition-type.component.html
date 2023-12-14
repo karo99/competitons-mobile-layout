@@ -1,17 +1,59 @@
-<div class="competition-type__card">
-  <div class="competition-type__card--header">
-    <div>
+<div class="competition-type-card">
+  <div class="competition-type-card--header">
+    <div class="participants">
       <img src="assets/images/participants/participant-image-1.svg"
            alt="participant photo">
       <img src="assets/images/participants/participant-image-2.svg"
            alt="participant photo">
       <img src="assets/images/participants/participant-image-3.svg"
            alt="participant photo">
-      <img src="assets/images/participants/participants-number.svg"
-           alt="participant photo">
+      <div class="participants--circle">
+        <p>18</p>
+      </div>
     </div>
-    <ng-container>
+    <ng-container *ngIf="true">
       <p>Too late to join</p>
     </ng-container>
   </div>
+  <h2>Weekly Challenges</h2>
+  <app-contestant-card></app-contestant-card>
+  <div class="competition-info">
+    <div class="competition-info--login">
+      <div>
+        <img src="assets/images/round/profile-image-round-2.svg"
+             alt="profile photo">
+      </div>
+      <div>
+        <p class="big-text">Roger K</p>
+        <p class="small-text">&#64;rog13k</p>
+      </div>
+    </div>
+
+
+
+    <div class="competition-info--prize">
+      <div class="competition-info--circle">
+        <img src="assets/icons/xbits.svg"
+             alt="xbits sign">
+      </div>
+      <div>
+      <p class="big-text">20,000</p>
+      <p class="small-text">&#64;xBits prize</p>
+      </div>
+    </div>
+
+    <div class="competition-info--duration">
+      <div class="competition-info--circle">
+        <p>3</p>
+      </div>
+      <div>
+      <p class="big-text">Days</p>
+      <p class="small-text">past</p>
+      </div>
+    </div>
+  </div>
+
+  <button>
+    <p>VIEW</p>
+  </button>
 </div>
