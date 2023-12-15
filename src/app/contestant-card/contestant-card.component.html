@@ -1,12 +1,17 @@
 <div class="contestant-card-wrapper">
-
-
-  <div class="contestant-card-wrapper--place">
-
-    <!--        <img src="assets/blurs/first-card/1st.svg"-->
-    <!--             alt="user profile image">-->
-    <img src="assets/images/polygon/profile-image-polygon-1.svg"
-         alt="user profile image">
+  <div class="contestant-card-wrapper--place" [ngClass]="{
+  'background-light-green' : contestant?.backgroundColor === backgroundColor.LIGHT_GREEN,
+  'background-purple' : contestant?.backgroundColor === backgroundColor.PURPLE,
+  'background-beige' : contestant?.backgroundColor === backgroundColor.BEIGE,
+  'background-grey' : contestant?.backgroundColor === backgroundColor.GREY,
+  'background-hot-beige' : contestant?.backgroundColor === backgroundColor.HOT_BEIGE,
+  'background-light-beige' : contestant?.backgroundColor === backgroundColor.LIGHT_BEIGE,
+  }">
+    <div class="contestant-card--image-wrapper">
+      <p><span>{{index}}</span><span>{{getSuffix(index)}}</span></p>
+      <img src="assets/images/polygon/{{contestant?.pictureFileName}}.svg"
+           alt="user profile image">
+    </div>
   </div>
 
   <div class="contestant-card">
@@ -36,7 +41,7 @@
         <p class="stat-box--label">Yield</p>
       </div>
       <div class="stat-box-balance"
-      [ngClass]="{'negative-balance': isBalanceNegative}">
+           [ngClass]="{'negative-balance': isBalanceNegative}">
         <p class="stat-box-balance--cash">{{contestant?.cashBalance}}</p>
         <p class="stat-box-balance--percentage">{{contestant?.percentage}}</p>
       </div>

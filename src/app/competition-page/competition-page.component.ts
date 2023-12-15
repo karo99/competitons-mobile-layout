@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {CompetitionTypeComponent} from "../competition-type/competition-type.component";
 import {NgForOf} from "@angular/common";
-import {CompetitionTypeConfig} from "../competition-type/competition-type-config";
+import {BackgroundColor, CompetitionTypeConfig} from "../competition-type/competition-type-config";
 
 @Component({
   selector: 'app-competition-page',
@@ -25,7 +25,9 @@ export class CompetitionPageComponent {
           contestantName: 'Roger Korsgaard',
           isVerified: true,
           cashBalance: "+ $7,500",
-          percentage: '45%'
+          percentage: '45%',
+          pictureFileName: 'profile-image-polygon-1',
+          backgroundColor: BackgroundColor.LIGHT_GREEN
         },
         {
           alerts: '20',
@@ -34,7 +36,9 @@ export class CompetitionPageComponent {
           contestantName: 'Charlie Herwitz',
           isVerified: true,
           cashBalance: "+ $1,430",
-          percentage: '25%'
+          percentage: '25%',
+          pictureFileName: 'profile-image-polygon-2',
+          backgroundColor: BackgroundColor.PURPLE
         },
         {
           alerts: '20',
@@ -43,7 +47,9 @@ export class CompetitionPageComponent {
           contestantName: 'Ahmad Mango',
           isVerified: false,
           cashBalance: "- $1,500",
-          percentage: '10%'
+          percentage: '10%',
+          pictureFileName: 'profile-image-polygon-3',
+          backgroundColor: BackgroundColor.BEIGE
         }
       ],
       xBitsPrize: '20,000',
@@ -62,7 +68,9 @@ export class CompetitionPageComponent {
           contestantName: 'Zain Mango',
           isVerified: true,
           cashBalance: "+ $3,500",
-          percentage: '32%'
+          percentage: '32%',
+          pictureFileName: 'profile-image-polygon-4',
+          backgroundColor: BackgroundColor.GREY
         },
         {
           alerts: '20',
@@ -71,7 +79,9 @@ export class CompetitionPageComponent {
           contestantName: 'Leo Kenter',
           isVerified: false,
           cashBalance: "+ $2,550",
-          percentage: '18%'
+          percentage: '18%',
+          pictureFileName: 'profile-image-polygon-5',
+          backgroundColor: BackgroundColor.HOT_BEIGE
         },
         {
           alerts: '20',
@@ -80,7 +90,9 @@ export class CompetitionPageComponent {
           contestantName: 'Marcus Dias',
           isVerified: false,
           cashBalance: "+ $1,000",
-          percentage: '10%'
+          percentage: '10%',
+          pictureFileName: 'profile-image-polygon-6',
+          backgroundColor: BackgroundColor.LIGHT_BEIGE
         }
       ],
       xBitsPrize: '15,000',

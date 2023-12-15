@@ -14,6 +14,11 @@
   src: url('./assets/fonts/Poppins-SemiBold.ttf');
 }
 
+@font-face {
+  font-family: 'Poppins SemiBold Italic';
+  src: url('./assets/fonts/Poppins-SemiBoldItalic.ttf');
+}
+
 body {
   background-color: black;
   margin: 0;

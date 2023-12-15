@@ -28,7 +28,7 @@
 
     &--circle {
       width: 16px;
-      height: 16px;
+      aspect-ratio: 1;
       background-color: #2B2E30;
       border-radius: 50%;
       display: flex;
@@ -66,7 +66,7 @@
 
     &--circle {
       width: 24px;
-      height: 24px;
+      aspect-ratio: 1;
       background-color: rgba(255, 255, 255, 0.1);
       border-radius: 50%;
       display: flex;
@@ -115,12 +115,12 @@
 
     .over-time {
       p {
-        color: $salmon;
+        color: $light-red;
       }
 
       .competition-info--circle {
         background-color: $dark-claret;
-        border: 0.5px solid $salmon;
+        border: 0.5px solid $light-red;
       }
     }
   }
@@ -131,6 +131,13 @@
     border: 0;
     background-color: $light-green-1;
     padding: 14.5px;
+    cursor: pointer;
+    box-shadow: inset 0 10px 15px rgba(0, 0, 0, 0.25);
+
+    &:hover {
+      box-shadow: inset 0 10px 30px rgba(0, 0, 0, 0.40);
+      background-color: $light-green-1-hover;
+    }
 
     p {
       color: $dark-green;

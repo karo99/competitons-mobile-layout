@@ -9,19 +9,17 @@
   margin-bottom: 10px;
 
   &--place {
-    background-color: $a;
+    width: 50px;
+    background-color: $background-green;
     border-radius: 8px 0 0 8px;
   }
 
-
-  img {
-    //margin: 18px 0 18px 11px;
-  }
 }
 
 .contestant-card {
   padding: 8px 12px 11px 22px;
-  width: 100%;
+  width: calc(100% - 50px);
+  box-sizing: border-box;
   position: relative;
 
   &--name {
@@ -29,6 +27,38 @@
 
     p {
       margin-right: 5px;
+    }
+  }
+
+
+  &--image-wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    p {
+      position: absolute;
+      left: 6px;
+      top: -3px;
+      font-family: "Poppins SemiBold Italic", serif;
+      font-size: 24px;
+      color: rgba(11, 37, 77, 0.2);
+    }
+
+    span:first-child {
+      font-size: 33px;
+    }
+
+    span:last-child {
+      vertical-align: super;
+    }
+
+    img {
+      position: absolute;
+      top: 50%;
+      right: -9px;
+      z-index: 1;
+      transform: translate(0, -50%);
     }
   }
 
@@ -44,7 +74,7 @@
   }
 
   &--gradient-failure {
-    background: black linear-gradient(to left, $salmon, rgba(255, 111, 111, 0));
+    background: black linear-gradient(to left, $light-red, rgba(255, 111, 111, 0));
   }
 
   &--stats {
@@ -86,8 +116,31 @@
 
 .negative-balance {
   .stat-box-balance--cash, .stat-box-balance--percentage {
-    color: $salmon;
+    color: $light-red;
   }
 }
 
+.background-light-green {
+  background-color: $background-green;
+}
+
+.background-purple {
+  background-color: $background-purple;
+}
+
+.background-beige {
+  background-color: $background-beige;
+}
+
+.background-grey {
+  background-color: $background-grey;
+}
+
+.background-hot-beige {
+  background-color: $background-hot-beige;
+}
+
+.background-light-beige {
+  background-color: $background-light-beige;
+}
 

@@ -18,8 +18,8 @@
 
   <h2 [ngStyle]="{'opacity': competition?.isContestAvailable ? '1' : '0.5'}">{{competition?.competitionName}}</h2>
 
-  <ng-container *ngFor="let contestant of competition?.contestantCards">
-    <app-contestant-card [contestant]="contestant"></app-contestant-card>
+  <ng-container *ngFor="let contestant of competition?.contestantCards; index as i">
+    <app-contestant-card [contestant]="contestant" [index]="i + 1"></app-contestant-card>
   </ng-container>
   <div class="competition-info">
     <div class="competition-info--login">
@@ -36,10 +36,10 @@
 
     <div class="competition-info--prize">
 
-        <div class="competition-info--circle green-border">
-          <img src="assets/icons/xbits.svg"
-               alt="xbits sign">
-        </div>
+      <div class="competition-info--circle green-border">
+        <img src="assets/icons/xbits.svg"
+             alt="xbits sign">
+      </div>
 
       <div>
         <p class="big-text">{{competition?.xBitsPrize}}</p>

@@ -15,7 +15,17 @@ export interface ContestantCardConfig {
   yield: string;
   contestantName: string;
   isVerified: boolean;
-  // image: HTMLImageElement;
   cashBalance: string;
   percentage: string;
+  pictureFileName: string;
+  backgroundColor: BackgroundColor;
+}
+
+export enum BackgroundColor {
+  LIGHT_GREEN,
+  PURPLE,
+  BEIGE,
+  GREY,
+  HOT_BEIGE,
+  LIGHT_BEIGE
 }

@@ -18,8 +18,4 @@ import {CompetitionTypeConfig} from "./competition-type-config";
 })
 export class CompetitionTypeComponent {
   @Input() competition: CompetitionTypeConfig | undefined;
-
-
-
-
 }
