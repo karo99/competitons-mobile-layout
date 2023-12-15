@@ -1,17 +1,21 @@
 
 export interface CompetitionTypeConfig {
+  competitionName: string;
+  contestantCards: ContestantCardConfig[];
+  xBitsPrize: string;
+  shortName: string;
+  login: string;
+  days: string;
+  isContestAvailable: boolean;
+}
+
+export interface ContestantCardConfig {
   alerts: string;
   winRate: string;
   yield: string;
   contestantName: string;
   isVerified: boolean;
-  competitionName: string;
-  xBitsPrize: string;
-  image: HTMLImageElement;
-  shortName: string;
-  login: string;
-  daysAvailable: string;
-  isContestAvailable: boolean;
+  // image: HTMLImageElement;
   cashBalance: string;
   percentage: string;
 }

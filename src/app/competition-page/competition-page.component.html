@@ -1,4 +1,6 @@
 <div class="competition-page">
   <h1>Competitions</h1>
-  <app-competition-type></app-competition-type>
+  <ng-container *ngFor="let competition of competitions">
+    <app-competition-type [competition]="competition"></app-competition-type>
+  </ng-container>
 </div>

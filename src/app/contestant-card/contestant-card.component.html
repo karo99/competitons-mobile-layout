@@ -1,1 +1,44 @@
-<p>contestant-card works!</p>
+<div class="contestant-card-wrapper">
+  <div class="blur">
+  </div>
+
+  <div class="contestant-card-wrapper--place">
+
+    <!--        <img src="assets/blurs/first-card/1st.svg"-->
+    <!--             alt="user profile image">-->
+    <img src="assets/images/polygon/profile-image-polygon-1.svg"
+         alt="user profile image">
+  </div>
+
+  <div class="contestant-card">
+    <div class="contestant-card--gradient">
+    </div>
+    <div class="contestant-card--name">
+      <p>{{contestant?.contestantName}}</p>
+
+      <ng-container *ngIf="contestant?.isVerified">
+        <img src="assets/icons/verified-user.svg"
+             alt="check icon">
+      </ng-container>
+
+    </div>
+    <div class="contestant-card--stats">
+      <div class="stat-box">
+        <p class="stat-box--value">{{contestant?.alerts}}</p>
+        <p class="stat-box--label">Alerts</p>
+      </div>
+      <div class="stat-box">
+        <p class="stat-box--value">{{contestant?.winRate}}</p>
+        <p class="stat-box--label">Win Rate</p>
+      </div>
+      <div class="stat-box">
+        <p class="stat-box--value">{{contestant?.yield}}</p>
+        <p class="stat-box--label">Yield</p>
+      </div>
+      <div class="stat-box-balance">
+        <p class="stat-box-balance--cash">{{contestant?.cashBalance}}</p>
+        <p class="stat-box-balance--percentage">{{contestant?.percentage}}</p>
+      </div>
+    </div>
+  </div>
+</div>

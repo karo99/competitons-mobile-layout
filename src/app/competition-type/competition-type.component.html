@@ -11,12 +11,16 @@
         <p>18</p>
       </div>
     </div>
-    <ng-container *ngIf="true">
+    <ng-container *ngIf="!competition?.isContestAvailable">
       <p>Too late to join</p>
     </ng-container>
   </div>
-  <h2>Weekly Challenges</h2>
-  <app-contestant-card></app-contestant-card>
+
+  <h2 [ngStyle]="{'opacity': competition?.isContestAvailable ? '1' : '0.5'}">{{competition?.competitionName}}</h2>
+
+  <ng-container *ngFor="let contestant of competition?.contestantCards">
+    <app-contestant-card [contestant]="contestant"></app-contestant-card>
+  </ng-container>
   <div class="competition-info">
     <div class="competition-info--login">
       <div>
@@ -24,11 +28,10 @@
              alt="profile photo">
       </div>
       <div>
-        <p class="big-text">Roger K</p>
-        <p class="small-text">&#64;rog13k</p>
+        <p class="big-text">{{competition?.shortName}}</p>
+        <p class="small-text">{{competition?.login}}</p>
       </div>
     </div>
-
 
 
     <div class="competition-info--prize">
@@ -37,23 +40,35 @@
              alt="xbits sign">
       </div>
       <div>
-      <p class="big-text">20,000</p>
-      <p class="small-text">&#64;xBits prize</p>
+        <p class="big-text">{{competition?.xBitsPrize}}</p>
+        <p class="small-text">&#64;xBits prize</p>
       </div>
     </div>
 
     <div class="competition-info--duration">
       <div class="competition-info--circle">
-        <p>3</p>
+        <p>{{competition?.days}}</p>
       </div>
       <div>
-      <p class="big-text">Days</p>
-      <p class="small-text">past</p>
+        <p class="big-text">Days</p>
+        <ng-container *ngIf="!competition?.isContestAvailable; else daysLeft">
+          <p class="small-text">past</p>
+        </ng-container>
       </div>
     </div>
   </div>
 
   <button>
-    <p>VIEW</p>
+    <ng-container *ngIf="!competition?.isContestAvailable; else join">
+      <p>VIEW</p>
+    </ng-container>
   </button>
 </div>
+
+<ng-template #daysLeft>
+  <p class="small-text">left</p>
+</ng-template>
+
+<ng-template #join>
+  <p>JOIN</p>
+</ng-template>

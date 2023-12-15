@@ -8,6 +8,7 @@
   border: 0.5px solid rgba(255, 255, 255, 0.2);
   padding: 14px 15px 16px 15px;
   box-sizing: border-box;
+  margin-bottom: 9px;
 
   &--header {
     display: flex;
@@ -42,7 +43,7 @@
   }
 
   h2 {
-    color: $white_with-opacity;
+    color: #FFFFFF;
     font-size: 20px;
     margin: 18px 0 22px 0;
   }
@@ -99,6 +100,7 @@
     width: 100%;
     margin-bottom: 16px;
     border-radius: 13px;
+    border: 0;
     background-color: $light-green-1;
     padding: 14.5px;
     p {
