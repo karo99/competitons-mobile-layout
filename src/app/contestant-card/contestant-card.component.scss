@@ -51,6 +51,10 @@
     border-radius: 8px;
   }
 
+  &--gradient-failure {
+    background: black linear-gradient(to left, $salmon, rgba(255, 111, 111, 0));
+  }
+
   &--stats {
     display: flex;
   }
@@ -70,7 +74,7 @@
 
   .stat-box-balance {
     position: absolute;
-    left: 72%;
+    right: 12px;
 
     &--cash {
       font-family: "Poppins SemiBold", serif;
@@ -85,6 +89,12 @@
       display: flex;
       justify-content: flex-end;
     }
+  }
+}
+
+.negative-balance {
+  .stat-box-balance--cash, .stat-box-balance--percentage {
+    color: $salmon;
   }
 }
 

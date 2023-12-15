@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {NgForOf, NgIf, NgStyle} from "@angular/common";
+import {NgClass, NgForOf, NgIf, NgStyle} from "@angular/common";
 import {ContestantCardComponent} from "../contestant-card/contestant-card.component";
 import {CompetitionTypeConfig} from "./competition-type-config";
 
@@ -10,7 +10,8 @@ import {CompetitionTypeConfig} from "./competition-type-config";
     NgIf,
     ContestantCardComponent,
     NgForOf,
-    NgStyle
+    NgStyle,
+    NgClass
   ],
   templateUrl: './competition-type.component.html',
   styleUrl: './competition-type.component.scss'

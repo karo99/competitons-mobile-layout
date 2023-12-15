@@ -11,7 +11,8 @@
   </div>
 
   <div class="contestant-card">
-    <div class="contestant-card--gradient">
+    <div class="contestant-card--gradient"
+         [ngClass]="{'contestant-card--gradient-failure' : isBalanceNegative}">
     </div>
     <div class="contestant-card--name">
       <p>{{contestant?.contestantName}}</p>
@@ -35,7 +36,8 @@
         <p class="stat-box--value">{{contestant?.yield}}</p>
         <p class="stat-box--label">Yield</p>
       </div>
-      <div class="stat-box-balance">
+      <div class="stat-box-balance"
+      [ngClass]="{'negative-balance': isBalanceNegative}">
         <p class="stat-box-balance--cash">{{contestant?.cashBalance}}</p>
         <p class="stat-box-balance--percentage">{{contestant?.percentage}}</p>
       </div>

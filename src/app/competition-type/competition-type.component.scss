@@ -72,17 +72,32 @@
       justify-content: center;
       align-items: center;
       margin-right: 8px;
+      border: 0.5px solid white;
+
+      p {
+        font-family: "Poppins Medium", serif;
+        font-size: 12px;
+      }
     }
 
     &--prize {
       display: flex;
       align-items: center;
-      width: calc(100% - 87px - 58px - 10px);
+
+      .green-border {
+        border: 0.5px solid #05d7be;
+      }
+
     }
 
     &--duration {
       display: flex;
       align-items: center;
+
+      .competition-info--circle {
+        background-color: #42474A;
+      }
+
     }
 
     .big-text {
@@ -94,6 +109,17 @@
       font-size: 8px;
       color: $white_with-opacity;
     }
+
+    .over-time {
+      p {
+        color: $salmon;
+      }
+
+      .competition-info--circle {
+        background-color: $dark-claret;
+        border: 0.5px solid $salmon;
+      }
+    }
   }
 
   button {
@@ -103,6 +129,7 @@
     border: 0;
     background-color: $light-green-1;
     padding: 14.5px;
+
     p {
       color: $dark-green;
       font-family: "Poppins SemiBold", serif;
@@ -110,3 +137,4 @@
     }
   }
 }
+

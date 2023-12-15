@@ -35,17 +35,19 @@
 
 
     <div class="competition-info--prize">
-      <div class="competition-info--circle">
-        <img src="assets/icons/xbits.svg"
-             alt="xbits sign">
-      </div>
+
+        <div class="competition-info--circle green-border">
+          <img src="assets/icons/xbits.svg"
+               alt="xbits sign">
+        </div>
+
       <div>
         <p class="big-text">{{competition?.xBitsPrize}}</p>
         <p class="small-text">&#64;xBits prize</p>
       </div>
     </div>
 
-    <div class="competition-info--duration">
+    <div [ngClass]="{'over-time': !competition?.isContestAvailable}" class="competition-info--duration">
       <div class="competition-info--circle">
         <p>{{competition?.days}}</p>
       </div>
