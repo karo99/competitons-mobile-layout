@@ -2,8 +2,8 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding-top: 12px;
+  position: relative;
 
   &--image {
     display: flex;
@@ -24,7 +24,6 @@
   &--info {
     display: flex;
     flex-direction: column;
-    width: calc(100% - 51px - 17px - 10px);
 
     &--second-row {
       display: flex;
@@ -44,5 +43,7 @@
   &--add-user {
     display: flex;
     margin-right: 22px;
+    position: absolute;
+    right: 0;
   }
 }
